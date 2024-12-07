@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Tin nhắn từ nhân viên -->
+    <TextView
+        android:id="@+id/leftMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_weight="1"
+        android:background="#E0E0E0"
+        android:textColor="#000000"
+        android:visibility="gone"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="start" />
+
+    <!-- Tin nhắn từ khách hàng -->
+    <TextView
+        android:id="@+id/rightMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_weight="1"
+        android:background="#6200EE"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        android:layout_gravity="end" />
+</LinearLayout>

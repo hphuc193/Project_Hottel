@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bóng -->
+    <item>
+        <shape>
+            <solid android:color="#40000000" /> <!-- Màu bóng (đen trong suốt) -->
+            <corners android:radius="20dp" />    <!-- Bo góc -->
+        </shape>
+    </item>
+
+    <!-- Nền và viền -->
+    <item android:left="2dp" android:top="2dp">
+        <shape>
+            <solid android:color="#7f00ff" /> <!-- Màu nền -->
+            <corners android:radius="10dp" />  <!-- Bo góc -->
+            <stroke
+                android:width="20dp"
+                android:color="#7f00ff" /> <!-- Màu viền -->
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".BookingDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/titleBookingdetail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backbtn15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Room Detail"
+            android:fontFamily="@font/passionone_bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="28dp">
+        </TextView>
+    </LinearLayout>
+
+
+    <!-- Thông tin phòng -->
+    <TextView
+        android:id="@+id/roomInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Room: Deluxe Suite\nPrice: 1.500.000/đêm"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/titleBookingdetail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Nút thanh toán -->
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+
+        android:text="Pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roomInfo"
+        app:layout_constraintVertical_bias="0.894" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

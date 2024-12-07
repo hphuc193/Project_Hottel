@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckinCheckoutActivity"
+    android:background="@drawable/beach5">
+
+    <LinearLayout
+        android:id="@+id/titleCheckinCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backbtn10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Checkin Checkout"
+
+            android:fontFamily="@font/passionone_bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="28dp">
+        </TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:layout_marginTop="5dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleCheckinCheckout">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Hình ảnh phòng -->
+                <ImageView
+                    android:id="@+id/roomImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hotel_image2" />
+
+                <!-- Tên loại phòng -->
+                <TextView
+                    android:id="@+id/roomTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deluxe Room"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Giá phòng -->
+                <TextView
+                    android:id="@+id/roomPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1,500,000 VND/đêm"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Mô tả phòng -->
+                <TextView
+                    android:id="@+id/roomDescriptionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking.."
+                    android:layout_marginStart="145dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_green_light"
+                    android:layout_marginTop="180dp"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/checkinButton"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:text="Check-in"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@android:color/holo_blue_light"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/CheckoutButton"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:text="Checkout"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@android:color/holo_orange_dark"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
