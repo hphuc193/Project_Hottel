@@ -12,7 +12,9 @@
         android:id="@+id/titleuserprofile"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/backbtn6"
@@ -25,14 +27,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="User Profile"
-            android:fontFamily="@font/passionone_bold"
-            android:textColor="@color/black"
             android:layout_marginStart="85dp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="28dp">
-        </TextView>
+            android:fontFamily="@font/passionone_bold"
+            android:text="User Profile"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"></TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -57,14 +58,12 @@
         android:id="@+id/UserProfileTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
         android:text="Change"
-        android:textSize="18dp"
         android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/paymentIF"

@@ -18,6 +18,8 @@ class OtherServicesActivity : AppCompatActivity() {
 
         // Tham chiếu đến BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        // Đặt item được chọn là Chat
+        bottomNavigationView.selectedItemId = R.id.nav_other
         // Lắng nghe sự kiện chọn item
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -49,5 +51,11 @@ class OtherServicesActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             finish()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.menu.findItem(R.id.nav_other).isChecked = true
     }
 }

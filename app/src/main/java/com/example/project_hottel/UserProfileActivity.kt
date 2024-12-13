@@ -18,6 +18,9 @@ class UserProfileActivity : AppCompatActivity() {
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation3)
 
+        // Đặt item được chọn là Chat
+        bottomNavigationView.selectedItemId = R.id.nav_profile
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_chat -> {
@@ -52,6 +55,12 @@ class UserProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val backbtnUser = findViewById<Button>(R.id.backbtn6)
+
+        backbtnUser.setOnClickListener{
+            finish()
+        }
+
         val PaymentTV: TextView = findViewById(R.id.paymentIF)
 
         // Thiết lập sự kiện click cho TextView
@@ -60,6 +69,13 @@ class UserProfileActivity : AppCompatActivity() {
             val intent = Intent(this@UserProfileActivity, PaymentInformationActivity::class.java)
             startActivity(intent)
         }
+    }
+    override fun onResume() {
+
+        super.onResume()
+        // Đặt lại trạng thái chọn cho item tương ứng (ví dụ: Home)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation3)
+        bottomNavigationView.menu.findItem(R.id.nav_profile).isChecked = true
     }
 
 }

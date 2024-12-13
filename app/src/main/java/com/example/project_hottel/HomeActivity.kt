@@ -17,6 +17,9 @@ class HomeActivity : AppCompatActivity() {
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation1)
 
+        // Đặt item được chọn là home
+        bottomNavigationView.selectedItemId = R.id.nav_home
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_chat -> {
@@ -58,6 +61,13 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this@HomeActivity, RoomListActivity::class.java)
             startActivity(intent)
         }
+    }
+    override fun onResume() {
+
+        super.onResume()
+        // Đặt lại trạng thái chọn cho item tương ứng (ví dụ: Home)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation1)
+        bottomNavigationView.menu.findItem(R.id.nav_home).isChecked = true
     }
 
 }

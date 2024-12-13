@@ -39,94 +39,24 @@
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="322dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/FirstNameET"
-                    android:layout_width="150dp"
-                    android:layout_height="42dp"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginTop="20dp"
-                    android:ems="10"
-                    android:hint="First Name"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/LasttNameET"
-                    android:layout_width="160dp"
-                    android:layout_height="42dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:ems="10"
-                    android:hint="Last Name"
-                    android:inputType="text" />
-            </LinearLayout>
-
             <EditText
-                android:id="@+id/phonenumberET"
+                android:id="@+id/usernameET"
                 android:layout_width="320dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="20dp"
                 android:ems="10"
-                android:hint="Phone Number"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/adressET"
-                android:layout_width="320dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:hint="Adress"
+                android:hint="User Name"
                 android:inputType="text" />
 
             <LinearLayout
-                android:layout_width="335dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/usernameET"
-                    android:layout_width="150dp"
-                    android:layout_height="42dp"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginTop="20dp"
-                    android:ems="10"
-                    android:hint="User Name"
-                    android:inputType="text" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Male"></RadioButton>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Female"></RadioButton>
-            </LinearLayout>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
                 android:orientation="horizontal">
-
 
                 <EditText
                     android:id="@+id/passwordET"
-                    android:layout_width="150dp"
+                    android:layout_width="296dp"
                     android:layout_height="42dp"
                     android:layout_marginLeft="7dp"
                     android:layout_marginTop="20dp"
@@ -134,15 +64,39 @@
                     android:hint="Password"
                     android:inputType="textPassword" />
 
+                <ImageView
+                    android:id="@+id/iconPasswordVisibility"
+                    android:layout_width="24dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_visibility_off" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <EditText
-                    android:id="@+id/DofBET"
-                    android:layout_width="160dp"
+                    android:id="@+id/confirmPasswordET"
+                    android:layout_width="296dp"
                     android:layout_height="42dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="7dp"
                     android:layout_marginTop="20dp"
                     android:ems="10"
-                    android:hint="01/01/2004"
-                    android:inputType="datetime" />
+                    android:hint="Cofirm Password"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/togglePasswordVisibility"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_visibility_off" />
             </LinearLayout>
 
             <EditText
@@ -152,7 +106,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="20dp"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="Email or phone number"
                 android:inputType="text" />
 
             <Button

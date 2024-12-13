@@ -12,7 +12,9 @@
         android:id="@+id/titlepayment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/backbtn5"
@@ -25,12 +27,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="Payment Information"
-            android:textColor="@color/black"
             android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="25dp">
+            android:text="Payment Information"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold">
 
         </TextView>
     </LinearLayout>

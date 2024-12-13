@@ -49,6 +49,9 @@ class EditProfileActivity : AppCompatActivity() {
         }
         // Tham chiếu đến BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        bottomNavigationView.selectedItemId = R.id.nav_profile
+
         // Lắng nghe sự kiện chọn item
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {

@@ -19,6 +19,10 @@ class HistoryBookingActivity : AppCompatActivity() {
 
         // Tham chiếu đến BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        // Đặt item được chọn là Chat
+        bottomNavigationView.selectedItemId = R.id.nav_history
+
         // Lắng nghe sự kiện chọn item
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -62,5 +66,13 @@ class HistoryBookingActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.ListView1)
         val adapter = HistoryBookingAdapter(this, bookings)
         listView.adapter = adapter
+    }
+
+    override fun onResume() {
+
+        super.onResume()
+        // Đặt lại trạng thái chọn cho item tương ứng (ví dụ: Home)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.menu.findItem(R.id.nav_history).isChecked = true
     }
 }
