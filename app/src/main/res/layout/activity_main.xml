@@ -2,170 +2,90 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="@drawable/beach5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title"
+    <Button
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/passionone_bold"
-        android:text="THIENHUONG HOTEL"
-        android:textSize="35dp"
-        android:shadowColor="#40000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        android:text="Login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wellcomeTx" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.95"
+        />
 
-
-    <TextView
-        android:id="@+id/wellcomeTx"
+    <Button
+        android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:fontFamily="@font/satisfy_regular"
-        android:text="Wellcome to"
-        android:shadowColor="#40000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="4"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:text="Logout"
+        app:layout_constraintBaseline_toBaselineOf="@+id/login_btn"
+        app:layout_constraintEnd_toStartOf="@+id/login_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.95"
+        />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="18dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
 
-        <!-- Các thành phần trong ô -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        >
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="@color/app_primary_color"
+            android:paddingHorizontal="15sp"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+
+            app:layout_constraintTop_toBottomOf="@+id/app_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            >
             <TextView
-                android:id="@+id/SigninTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign in"
-                android:textColor="@color/black"
-                android:textSize="23dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="322dp" />
-
-            <EditText
-                android:id="@+id/editTextText"
-                android:layout_width="320dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:hint="Username"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/passwordET"
-                android:layout_width="320dp"
-                android:layout_height="42dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword" />
-
+                android:text="Username:"
+                android:layout_marginRight="10dp"
+                />
             <TextView
-                android:id="@+id/fogotTV"
+                android:id="@+id/username_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="9dp"
-                android:layout_marginTop="5dp"
-                android:text="Fogot password"
-                android:textColor="@color/black"
-                android:textSize="13dp"
-                android:textStyle="italic"
-                tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="322dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/loginBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/black_button"
-                    android:text="Login"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/RegisterBtnMain"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/black_button"
-                    android:text="Register"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
+                android:text="default_text"
+                android:textColor="@color/app_primary_color"
+                style="@style/big_text"
+                />
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/ggBtn"
-        android:layout_width="374dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:background="@drawable/white_button"
-        android:text="continue with google"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
-    <Button
-        android:id="@+id/fbBtn"
-        android:layout_width="374dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/black_button"
-        android:text="continue with facebook"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ggBtn" />
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
