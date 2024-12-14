@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfileActivity"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/mobilebacground">
 
     <LinearLayout
         android:id="@+id/titleuserprofile"
@@ -36,47 +36,94 @@
             android:textStyle="bold"></TextView>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/titleuserprofile">
-
-        <ImageView
-            android:id="@+id/avatar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="155dp"
-            android:background="@drawable/circle_mask"
-            android:clipToOutline="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/avata3d" />
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/UserProfileTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Change"
-        android:textColor="@color/white"
-        android:textSize="18dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="@+id/avatar">
 
-    <TextView
-        android:id="@+id/paymentIF"
+        <!-- Nội dung trong CardView -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/UserProfileTV"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/edit_square_24"
+                android:textColor="@color/white"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Lê Công Hoàng Phúc"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:clipToOutline="true"
+        android:elevation="14dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avata3d"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleuserprofile" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:text="Payment Information"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        android:textStyle="bold"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UserProfileTV" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <TextView
+            android:id="@+id/paymentIF"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:text="Payment Information"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation3"

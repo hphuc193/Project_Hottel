@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/mobilebacground"
     tools:context="PaymentInformationActivity">
 
     <LinearLayout
@@ -59,7 +59,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="@drawable/card_background"
+                android:background="@drawable/cardbackground_image"
                 android:layout_marginBottom="16dp"
                 android:padding="16dp">
 
@@ -83,24 +83,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
                     android:text="#### #### #### ####"
-                    android:textSize="18sp"
                     android:textColor="@android:color/white"
-                    android:layout_marginTop="40dp" />
+                    android:textSize="18sp" />
 
 
                 <TextView
                     android:id="@+id/cardHolderNameTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="130dp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
                     android:text="Tên Chủ Thẻ"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/expiryDateTextView"

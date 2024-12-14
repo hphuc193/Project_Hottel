@@ -5,6 +5,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+<!--    <string name="ntonj8a2a0n5tsrm8uitut0qqk0a4ln9">client_id</string>-->
 
     <string-array name="payment_methods">
         <item>Thẻ tín dụng</item>
