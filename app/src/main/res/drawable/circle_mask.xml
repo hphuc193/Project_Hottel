@@ -1,23 +1,7 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Bóng nhẹ -->
-    <item>
-        <shape android:shape="oval">
-            <solid android:color="#80000000" /> <!-- Màu bóng (đen trong suốt) -->
-            <padding
-                android:left="4dp"
-                android:top="4dp"
-                android:right="4dp"
-                android:bottom="8dp" /> <!-- Khoảng cách bóng -->
-        </shape>
-    </item>
-
-    <!-- Hình oval với viền -->
-    <item>
-        <shape android:shape="oval">
-            <solid android:color="#FFFFFF" /> <!-- Màu nền (trắng) -->
-            <stroke
-                android:width="4dp"
-                android:color="@color/black" /> <!-- Viền đen -->
-        </shape>
-    </item>
-</layer-list>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFFFFF" />
+    <stroke
+        android:width="4dp"
+        android:color="@color/black" />
+</shape>

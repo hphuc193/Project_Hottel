@@ -102,15 +102,6 @@ class RoomListActivity : AppCompatActivity() {
             finish()
         }
 
-
-//        val LNitemAC: LinearLayout = findViewById(R.id.LNitem1)
-//
-//        // Thiết lập sự kiện click cho LinearLayout
-//        LNitemAC.setOnClickListener {
-//            // Tạo một Intent để chuyển sang SecondActivity
-//            val intent = Intent(this@RoomListActivity, RoomDetailActivity::class.java)
-//            startActivity(intent)
-//        }
     }
 }
 
