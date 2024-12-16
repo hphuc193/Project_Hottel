@@ -102,6 +102,15 @@ class RoomListActivity : AppCompatActivity() {
             finish()
         }
 
+        val searchTV: TextView = findViewById(R.id.searchBoxroomlist)
+
+        // Thiết lập sự kiện click cho TextView
+        searchTV.setOnClickListener {
+            // Tạo một Intent để chuyển sang SecondActivity
+            val intent = Intent(this@RoomListActivity, SearchActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
@@ -116,7 +125,7 @@ data class Room(
 
 // Adapter
 class RoomAdapter(
-    private val roomList: List<Room>,
+    private var roomList: List<Room>,
     private val onItemClick: (Room) -> Unit
 ) : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
 
@@ -144,5 +153,10 @@ class RoomAdapter(
 
     override fun getItemCount(): Int {
         return roomList.size
+    }
+
+    fun updateRoomList(newList: List<Room>) {
+        roomList = newList
+        notifyDataSetChanged()
     }
 }

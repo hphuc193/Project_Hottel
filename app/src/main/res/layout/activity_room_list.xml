@@ -19,17 +19,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/searchBoxroomlist"
         android:layout_width="350dp"
         android:layout_height="30dp"
         android:layout_weight="1"
         android:background="@drawable/search_box_background"
         android:drawableLeft="@drawable/search_24"
-        android:drawablePadding="8dp"
-        android:hint="Search"
+        android:drawablePadding="16dp"
+        android:text="Search"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:paddingTop="4dp"
         android:textColor="#000"
         android:textColorHint="#aaa"
         app:layout_constraintStart_toEndOf="@+id/backbtn14"
