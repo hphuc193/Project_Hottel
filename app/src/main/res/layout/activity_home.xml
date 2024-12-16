@@ -35,6 +35,7 @@
                     android:src="@drawable/avata3d" />
 
                 <Button
+                    android:id="@+id/searchBtnHome"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="280dp"
@@ -92,78 +93,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- Card 1 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="200dp"
-                        android:layout_height="150dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="4dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:padding="8dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/hotel_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="8dp"
-                                android:text="Presidential suite"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="100.000$"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="200dp"
-                        android:layout_height="150dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="4dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:padding="8dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/hotel_image" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="8dp"
-                                android:text="Presidential suite"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="100.000$"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Add more cards here -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/horizontalRecyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -189,86 +123,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- Card 1 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="200dp"
-                        android:layout_height="150dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="4dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:padding="8dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/hotel_image2" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="8dp"
-                                android:text="Fast Food"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20$"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="200dp"
-                        android:layout_height="150dp"
-                        android:layout_marginEnd="8dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="4dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:padding="8dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="80dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/hotel_image2" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="8dp"
-                                android:text="Fast Food"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20$"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Add more cards here -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/horizontalRecyclerView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
 
                 </LinearLayout>
             </HorizontalScrollView>
 
         </LinearLayout>
     </ScrollView>
-
-
     />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

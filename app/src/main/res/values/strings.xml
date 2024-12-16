@@ -5,13 +5,12 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-<!--    <string name="ntonj8a2a0n5tsrm8uitut0qqk0a4ln9">client_id</string>-->
+    <!--    <string name="ntonj8a2a0n5tsrm8uitut0qqk0a4ln9">client_id</string>-->
 
     <string-array name="payment_methods">
-        <item>Thẻ tín dụng</item>
-        <item>Ví điện tử</item>
-        <item>Chuyển khoản ngân hàng</item>
-        <item>Thanh toán khi nhận hàng</item>
+        <item>Credit card</item>
+        <item>E-wallet</item>
+        <item>Bank transfer</item>
     </string-array>
 
 

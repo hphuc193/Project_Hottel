@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/mobilebacground"
     tools:context=".BookingDetailActivity">
 
     <LinearLayout
@@ -29,7 +29,7 @@
             android:layout_marginStart="85dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/passionone_bold"
-            android:text="Room Detail"
+            android:text="Booking Detail"
             android:textColor="@color/white"
             android:textSize="28dp"
             android:textStyle="bold"></TextView>
