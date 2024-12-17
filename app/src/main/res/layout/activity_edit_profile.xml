@@ -12,7 +12,7 @@
         android:id="@+id/titleEditprofile"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -42,7 +42,6 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:elevation="2dp"
-        android:layout_marginTop="25dp"
         android:scaleType="centerCrop"
         android:src="@drawable/avata3d"
         app:civ_border_color="@color/black"
@@ -67,7 +66,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="480dp"
+        android:layout_height="620dp"
         android:layout_marginTop="50dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="1dp"
@@ -85,6 +84,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone number: "
+                android:layout_marginTop="55dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+
             <EditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
@@ -93,10 +102,19 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:hint="Lê Công Hoàng Phúc"
-                android:layout_marginTop="55dp"
                 android:textSize="20sp"
                 android:background="@drawable/edit_text_border"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone number: "
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
 
             <EditText
                 android:id="@+id/phonenumberET"
@@ -104,12 +122,21 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/edit_text_border"
                 android:hint="0901234567"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
 
             <EditText
                 android:id="@+id/EmailET"
@@ -118,11 +145,20 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_border"
                 android:hint="phuc@example.com"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Of Birth: "
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
 
             <TextView
                 android:id="@+id/DofB"
@@ -131,48 +167,73 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_border"
                 android:text="19/03/2004"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adress: "
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+
+            <EditText
                 android:id="@+id/AdressTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_border"
-                android:text="60 CL, Cat Lai, Thu Duc City, Ho Chi Minh City"
+                android:hint="60 CL, CatLai, ThuDuc City, HoChiMinh City"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+
+            <EditText
                 android:id="@+id/Gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_border"
-                android:text="male"
+                android:hint="male"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CCCD:"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+
+            <EditText
                 android:id="@+id/cccdTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_border"
-                android:text="045201000000"
+                android:hint="045201000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -189,7 +250,7 @@
         android:background="@drawable/green_button"
         android:text="Save"
         android:textColor="@color/black"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         app:layout_constraintTop_toBottomOf="@+id/cardView"

@@ -8,6 +8,7 @@
     tools:context=".UserProfileActivity"
     android:background="@drawable/mobilebacground">
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation3"
         android:layout_width="0dp"
@@ -50,10 +51,10 @@
             android:textStyle="bold"></TextView>
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="480dp"
+        android:layout_height="500dp"
         android:layout_marginTop="50dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="4dp"
@@ -83,6 +84,8 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent" />
 
+
+
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
@@ -91,10 +94,12 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Lê Công Hoàng Phúc"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:background="@drawable/edit_text_border"
                 android:textStyle="bold" />
+
+
 
             <TextView
                 android:id="@+id/phonenumberTV"
@@ -109,6 +114,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+
+
             <TextView
                 android:id="@+id/EmailTV"
                 android:layout_width="match_parent"
@@ -121,6 +128,8 @@
                 android:text="phuc@example.com"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+
 
             <TextView
                 android:id="@+id/DofB"
@@ -135,6 +144,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+
+
             <TextView
                 android:id="@+id/AdressTV"
                 android:layout_width="match_parent"
@@ -148,6 +159,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+
+
             <TextView
                 android:id="@+id/Gender"
                 android:layout_width="match_parent"
@@ -160,6 +173,8 @@
                 android:text="male"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+
 
             <TextView
                 android:id="@+id/cccdTV"
@@ -177,12 +192,12 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+        <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:clipToOutline="true"
         android:elevation="14dp"
         android:scaleType="centerCrop"
@@ -195,7 +210,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleuserprofile" />
 
 
-    <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
