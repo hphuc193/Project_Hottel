@@ -10,47 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Project_Hottel"
+        android:theme="@style/Theme.HotelBookingSystemsAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".PaymentSuccessActivity"
+            android:name=".activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".RoomDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChatActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CheckinCheckoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BookingDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OtherServicesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PaymentInformationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EditProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UserProfileActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Project_Hottel" />
-        <activity
-            android:name=".HistoryBookingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RoomListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
