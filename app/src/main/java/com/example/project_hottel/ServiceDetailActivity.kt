@@ -3,6 +3,7 @@ package com.example.project_hottel
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,17 +11,28 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class UserProfileActivity : AppCompatActivity() {
+class ServiceDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_user_profile)
+        setContentView(R.layout.activity_service_detail)
+        // Nhận dữ liệu từ Intent
+        val ServiceName = intent.getStringExtra("SERVICE_NAME")
+        val ServicePrice = intent.getStringExtra("SERVICE_PRICE")
+        val ServiceImage = intent.getIntExtra("SERVICE_IMAGE", 0)
+        val ServiceDescription = intent.getStringExtra("SERVICE_DESCRIPTION")
+        val ServiceCapacity = intent.getStringExtra("SERVICE_CAPACITY")
 
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation3)
+        // Hiển thị dữ liệu lên màn hình
+        findViewById<TextView>(R.id.ServiceTextView).text = ServiceName
+        findViewById<TextView>(R.id.ServicePriceTextView).text = ServicePrice
+        findViewById<ImageView>(R.id.ServiceImageView).setImageResource(ServiceImage)
+        findViewById<TextView>(R.id.ServiceDescriptionTextView).text = ServiceDescription
+        findViewById<TextView>(R.id.ServiceCapacityTextView).text = ServiceCapacity
 
-        // Đặt item được chọn là Chat
-        bottomNavigationView.selectedItemId = R.id.nav_profile
-
+        // Tham chiếu đến BottomNavigationView
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        // Lắng nghe sự kiện chọn item
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_chat -> {
@@ -45,37 +57,18 @@ class UserProfileActivity : AppCompatActivity() {
                 }
                 else -> false
             }
-
         }
+        val backButton = findViewById<Button>(R.id.backbtn19)
 
-        val EditPF = findViewById<Button>(R.id.UserProfileTV)
-
-        EditPF.setOnClickListener {
-            val intent = Intent(this, EditProfileActivity::class.java)
-            startActivity(intent)
-        }
-
-        val backbtnUser = findViewById<Button>(R.id.backbtn6)
-
-        backbtnUser.setOnClickListener{
+        backButton.setOnClickListener {
             finish()
         }
 
-        val PaymentTV: TextView = findViewById(R.id.paymentIF)
+        val BookingAC = findViewById<Button>(R.id.bookingButton)
 
-        // Thiết lập sự kiện click cho TextView
-        PaymentTV.setOnClickListener {
-            // Tạo một Intent để chuyển sang SecondActivity
-            val intent = Intent(this@UserProfileActivity, PaymentMethodActivity::class.java)
+        BookingAC.setOnClickListener {
+            val intent = Intent(this, BookingDetailActivity::class.java)
             startActivity(intent)
         }
     }
-    override fun onResume() {
-
-        super.onResume()
-        // Đặt lại trạng thái chọn cho item tương ứng (ví dụ: Home)
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation3)
-        bottomNavigationView.menu.findItem(R.id.nav_profile).isChecked = true
-    }
-
 }

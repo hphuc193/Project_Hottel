@@ -8,6 +8,7 @@ import com.example.chatapp.Message
 import com.example.chatapp.MessageAdapter
 import com.example.project_hottel.R
 import com.example.project_hottel.databinding.ActivityChatBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class ChatActivity : AppCompatActivity() {
@@ -47,6 +48,7 @@ class ChatActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             finish()
         }
+
     }
 
     private fun addReply(replyText: String) {

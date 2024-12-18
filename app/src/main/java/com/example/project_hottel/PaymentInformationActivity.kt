@@ -19,6 +19,9 @@ class PaymentInformationActivity : AppCompatActivity() {
 
         // Tham chiếu đến BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        bottomNavigationView.selectedItemId = R.id.nav_profile
+
         // Lắng nghe sự kiện chọn item
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -58,7 +61,7 @@ class PaymentInformationActivity : AppCompatActivity() {
         val bankNameET = findViewById<EditText>(R.id.BankNameET)
         // Ánh xạ các view
         val cvvEditText: EditText = findViewById(R.id.cvvEditText)
-        val paymentMethodSpinner: Spinner = findViewById(R.id.paymentMethodSpinner)
+//        val paymentMethodSpinner: Spinner = findViewById(R.id.paymentMethodSpinner)
         val saveButton: Button = findViewById(R.id.saveButton)
 
         val cardHolderNameTextView = findViewById<TextView>(R.id.cardHolderNameTextView)
@@ -102,14 +105,14 @@ class PaymentInformationActivity : AppCompatActivity() {
 
         // Xử lý sự kiện nút lưu
         saveButton.setOnClickListener {
-            val paymentMethod = paymentMethodSpinner.selectedItem.toString()
+//            val paymentMethod = paymentMethodSpinner.selectedItem.toString()
             val cardHolderName = cardHolderNameEditText.text.toString()
             val cardNumber = cardNumberEditText.text.toString()
             val expiryDate = expiryDateEditText.text.toString()
             val cvv = cvvEditText.text.toString()
             val bankname = bankNameET.text.toString()
 
-            if ( paymentMethod.isEmpty() || cardHolderName.isEmpty() || cardNumber.isEmpty() || expiryDate.isEmpty() || cvv.isEmpty() || bankname.isEmpty()) {
+            if ( cardHolderName.isEmpty() || cardNumber.isEmpty() || expiryDate.isEmpty() || cvv.isEmpty() || bankname.isEmpty()) {
                 Toast.makeText(this, "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show()
             } else {
                 // Xử lý lưu thông tin tại đây

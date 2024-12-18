@@ -11,7 +11,9 @@
         android:id="@+id/PMSTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/backbtn16"
@@ -25,13 +27,12 @@
 
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="Payment Successful!"
-            android:textColor="@android:color/holo_green_dark"
             android:layout_marginStart="45dp"
             android:layout_marginTop="6dp"
-            android:textStyle="bold"
-            android:textSize="24dp">
-        </TextView>
+            android:text="Payment Successful!"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24dp"
+            android:textStyle="bold"></TextView>
     </LinearLayout>
 
     <!-- Nút đến màn hình lịch sử đặt phòng -->

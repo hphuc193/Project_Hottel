@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bóng của TextView -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/> <!-- Bo góc nhẹ -->
+            <solid android:color="#80000000"/> <!-- Bóng nhẹ (màu đen trong suốt) -->
+        </shape>
+    </item>
+
+    <!-- Viền của TextView -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/> <!-- Bo góc nhẹ -->
+            <stroke
+                android:color="#6200EE"
+            android:width="0dp" /> <!-- Độ dày viền -->
+            <solid android:color="#FFFFFF" /> <!-- Màu nền bên trong (trắng) -->
+        </shape>
+    </item>
+</layer-list>

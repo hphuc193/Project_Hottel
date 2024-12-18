@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bóng của ImageView -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="300dp" /> <!-- Bo góc hình tròn -->
+            <solid android:color="#80000000" /> <!-- Màu bóng (đen trong suốt) -->
+            <padding
+                android:left="4dp"
+                android:top="4dp"
+                android:right="4dp"
+                android:bottom="4dp" /> <!-- Khoảng cách bóng từ viền hình tròn -->
+        </shape>
+    </item>
+
+    <!-- Hình tròn chính -->
+    <item
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="300dp" /> <!-- Bo góc hình tròn -->
+            <solid android:color="#FFFFFF" /> <!-- Màu nền (trắng) -->
+        </shape>
+    </item>
+</layer-list>

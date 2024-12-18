@@ -6,35 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity"
-    android:background="@drawable/gradient_background">
+    android:background="#6200EE">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:background="#FFFFFF"
         android:orientation="vertical"
-        android:background="#FFFFFF">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:background="#6200EE"
-            >
+            android:orientation="horizontal">
+
             <Button
                 android:id="@+id/backbtn11"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="18dp"
                 android:background="@drawable/back_ios_24" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Trò chuyện với nhân viên hỗ trợ"
-                android:textSize="18sp"
                 android:gravity="center"
                 android:padding="16dp"
+                android:text="Trò chuyện với nhân viên hỗ trợ"
                 android:textColor="#FFFFFF"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -46,35 +49,35 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:padding="8dp"
-            android:clipToPadding="false" />
+            android:clipToPadding="false"
+            android:padding="8dp" />
 
         <!-- Thanh nhập tin nhắn -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#F1F1F1"
             android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F1F1F1">
+            android:padding="8dp">
 
             <EditText
                 android:id="@+id/messageEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Nhập tin nhắn..."
-                android:background="@android:color/white"
-                android:padding="12dp"
                 android:layout_marginEnd="8dp"
-                android:inputType="textMultiLine" />
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="Nhập tin nhắn..."
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
 
             <ImageButton
                 android:id="@+id/sendMessageButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="@null"
-                android:src="@drawable/ic_send"
                 android:contentDescription="Gửi tin nhắn"
+                android:src="@drawable/ic_send"
                 android:tint="#6200EE" />
         </LinearLayout>
     </LinearLayout>

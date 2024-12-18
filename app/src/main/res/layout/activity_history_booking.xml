@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoryBookingActivity"
-    android:background="@drawable/beach5">
+    android:background="@drawable/mobilebacground">
 
     <LinearLayout
         android:id="@+id/titlehistory"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/backbtn9"
@@ -25,21 +27,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="History Booking"
-            android:fontFamily="@font/passionone_bold"
-            android:textColor="@color/white"
             android:layout_marginStart="65dp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="28dp">
-        </TextView>
+            android:fontFamily="@font/passionone_bold"
+            android:text="History Booking"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"></TextView>
     </LinearLayout>
 
     <ListView
         android:id="@+id/ListView1"
         android:layout_width="match_parent"
         android:layout_marginTop="5dp"
-        android:layout_height="615dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="568dp"
+        android:dividerHeight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titlehistory">
