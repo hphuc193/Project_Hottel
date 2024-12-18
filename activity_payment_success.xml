@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".PaymentSuccessActivity">
+
+    <LinearLayout
+        android:id="@+id/PMSTV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/backbtn16"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/back_ios_24" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Payment Successful!"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:textSize="24dp">
+        </TextView>
+    </LinearLayout>
+
+    <!-- Nút đến màn hình lịch sử đặt phòng -->
+    <TextView
+        android:id="@+id/paymentMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Thank you for your booking!\nYour payment has been processed."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PMSTV" />
+
+    <Button
+        android:id="@+id/bookingHistoryButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Booking History"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintTop_toBottomOf="@id/paymentMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
