@@ -1,20 +1,29 @@
-package com.example.homework_week2
+package com.example.hotel
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var listView: ListView
+    private val roomList = listOf("Phòng Deluxe", "Phòng Suite", "Phòng Standard", "Phòng Family")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        listView = findViewById(R.id.listViewRooms)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, roomList)
+        listView.adapter = adapter
+
+        listView.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+            val intent = Intent(this, RoomDetailActivity::class.java)
+            intent.putExtra("roomName", roomList[position])
+            startActivity(intent)
         }
     }
 }
