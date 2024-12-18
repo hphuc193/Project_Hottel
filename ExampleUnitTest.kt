@@ -1,4 +1,4 @@
-package com.example.homework_week2
+package com.example.hotel
 
 import org.junit.Test
 
